@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'articles');
+Route::get('/', [PostController::class, 'index']);
+Route::get('/posts/{id}', [PostController::class, 'show'])->whereNumber('id');
+Route::get('/contact', [PostController::class, 'contact']);
 
 // Route::view('dashboard', 'dashboard')
 //     ->middleware(['auth', 'verified'])
@@ -23,4 +26,4 @@ Route::view('/', 'articles');
 //     return view('articles');
 // });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
