@@ -4,7 +4,7 @@
 @section('content')
 
     @foreach ($posts as $post)
-        <h2>{{ $post }}</h2>
+        <h2><a href="#"></a>{{ $post }}</h2>
     @endforeach
-    
+
 @endsection

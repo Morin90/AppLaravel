@@ -7,9 +7,10 @@
     <title>Mon application Laravel</title>
 </head>
 <body>
+    @include('partials.navbar')
     @yield('content')
 </body>
 <footer>
-    
+
 </footer>
 </html>
